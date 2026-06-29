@@ -1,29 +1,29 @@
 # Canva Pemalas Adventure
 
-Chrome/Edge extension untuk menjalankan download file Canva berurutan dalam beberapa format: PNG, PDF Standard, PDF Print, dan MP4 Video.
+Chrome/Edge extension for downloading Canva designs in multiple formats in sequence: PNG, PDF Standard, PDF Print, and MP4 Video.
 
-Extension ini **tidak membypass Canva** dan tidak mengambil file langsung dari server Canva. Cara kerjanya adalah mengotomasi klik pada UI Canva yang sedang kamu buka, jadi kamu tetap harus login dan punya akses download untuk desain tersebut.
+This extension **does not bypass Canva** and does not fetch files directly from Canva servers. It automates clicks on the Canva UI that is already open in your browser, so you still need to be logged in and have download access to the design.
 
-## Instalasi
+## Installation
 
-1. Buka `chrome://extensions` atau `edge://extensions`.
-2. Aktifkan **Developer mode**.
+1. Open `chrome://extensions` or `edge://extensions`.
+2. Enable **Developer mode**.
 3. Klik **Load unpacked**.
-4. Pilih folder ini:
+4. Select the extracted extension folder.
 
-   folder hasil extract repo ini.
+## Usage
 
-## Cara Pakai
+1. Open a design in the Canva editor.
+2. Wait until the design finishes loading.
+3. Click the **Canva Pemalas Adventure** extension icon to open the Chrome side panel.
+4. Select the formats you want.
+5. Optionally set a page range for each format, such as `1-4`, `2`, or `1,3`.
+6. Click **Download Terpilih**.
 
-1. Buka desain di Canva editor.
-2. Pastikan desain sudah selesai loading.
-3. Klik ikon extension **Canva Pemalas Adventure** untuk membuka side panel.
-4. Pilih format, isi pages per format jika perlu, lalu klik **Download Terpilih**.
+Settings can be stored in Chrome storage with **Save config**, or moved between computers with **Export Config** and **Load Config**.
 
-Config bisa disimpan di Chrome storage dengan **Save config**, atau dipindahkan antar-PC via **Export Config** dan **Load Config**.
+## Notes
 
-## Catatan
-
-- Kalau Canva mengubah teks atau susunan tombol, automation bisa perlu penyesuaian selector.
-- Kalau file besar atau halaman banyak, naikkan jeda antar format ke 5-8 detik.
-- Browser mungkin tetap menampilkan prompt lokasi download tergantung pengaturan download kamu.
+- If Canva changes its button labels or layout, the automation selectors may need updates.
+- For large files or many pages, increase the delay between formats to 5-8 seconds.
+- Your browser may still show download prompts depending on your download settings.
