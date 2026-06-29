@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canva Pemalas Adventure</title>
+    <link rel="stylesheet" href="sidepanel.css">
+  </head>
+  <body>
+    <main class="sidepanel">
+      <header>
+        <h1>Canva Pemalas Adventure</h1>
+        <p>Panel kanan native Chrome, tidak menutup canvas.</p>
+      </header>
+
+      <section class="formats" aria-label="Format download">
+        <label>
+          <input type="checkbox" value="PNG" checked>
+          <span>PNG</span>
+          <input class="format-pages" data-format-pages="PNG" type="text" placeholder="Pages">
+        </label>
+        <label>
+          <input type="checkbox" value="PDF Standard" checked>
+          <span>PDF Standard</span>
+          <input class="format-pages" data-format-pages="PDF Standard" type="text" placeholder="Pages">
+        </label>
+        <label>
+          <input type="checkbox" value="PDF Print">
+          <span>PDF Print</span>
+          <input class="format-pages" data-format-pages="PDF Print" type="text" placeholder="Pages">
+        </label>
+        <label>
+          <input type="checkbox" value="MP4 Video">
+          <span>MP4 Video</span>
+          <input class="format-pages" data-format-pages="MP4 Video" type="text" placeholder="Pages">
+        </label>
+      </section>
+
+      <label class="field">
+        <span>Jeda antar format</span>
+        <select id="delayMs">
+          <option value="2500">2.5 detik</option>
+          <option value="3500" selected>3.5 detik</option>
+          <option value="5000">5 detik</option>
+          <option value="8000">8 detik</option>
+        </select>
+      </label>
+
+      <label class="field field-check">
+        <input id="saveConfig" type="checkbox">
+        <span>Save config</span>
+      </label>
+
+      <div class="actions">
+        <button id="start" class="primary" type="button">Download Terpilih</button>
+        <button id="pdfOnly" class="secondary" type="button">Download PDF saja</button>
+        <button id="mp4Only" class="secondary" type="button">Download MP4 saja</button>
+        <button id="exportConfig" class="secondary" type="button">Export Config</button>
+        <button id="importConfig" class="secondary" type="button">Load Config</button>
+        <button id="copyDebug" class="secondary" type="button">Copy Debug</button>
+        <input id="importFile" type="file" accept="application/json,.json" hidden>
+      </div>
+
+      <p id="status" role="status">Siap.</p>
+    </main>
+
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

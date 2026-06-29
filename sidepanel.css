@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: #172026;
+  font: 14px/1.45 Arial, sans-serif;
+  background: #f7faf9;
+}
+
+.sidepanel {
+  display: grid;
+  grid-template-rows: auto auto auto auto minmax(120px, 1fr);
+  gap: 14px;
+  min-height: 100vh;
+  padding: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 4px 0 0;
+  color: #52616b;
+}
+
+.formats {
+  display: grid;
+  gap: 8px;
+}
+
+.formats label,
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 42px;
+  padding: 9px 10px;
+  border: 1px solid #d7e1df;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.formats label {
+  display: grid;
+  grid-template-columns: 18px minmax(86px, 1fr) minmax(84px, 126px);
+  justify-content: stretch;
+  align-items: center;
+  min-height: 52px;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #13a38b;
+}
+
+input[type="text"] {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid #bfd0cc;
+  border-radius: 6px;
+  padding: 7px 9px;
+  color: #172026;
+  background: #ffffff;
+}
+
+.field-stack {
+  display: grid;
+  align-items: stretch;
+}
+
+.format-pages {
+  grid-column: auto;
+  margin-top: 0;
+  min-height: 34px !important;
+  padding: 6px 8px !important;
+}
+
+.formats span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.field-check {
+  justify-content: flex-start;
+}
+
+select {
+  max-width: 130px;
+  border: 1px solid #bfd0cc;
+  border-radius: 6px;
+  padding: 6px 7px;
+  color: #172026;
+  background: #ffffff;
+}
+
+.actions {
+  display: grid;
+  gap: 10px;
+}
+
+button {
+  min-height: 42px;
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.primary {
+  border: 0;
+  color: #ffffff;
+  background: #13a38b;
+}
+
+.secondary {
+  border: 1px solid #c7d7d3;
+  color: #172026;
+  background: #ffffff;
+}
+
+#status {
+  min-height: 120px;
+  margin: 0;
+  padding: 10px;
+  border-radius: 8px;
+  color: #405158;
+  background: #edf4f2;
+  white-space: pre-wrap;
+}

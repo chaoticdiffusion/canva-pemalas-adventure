@@ -1,0 +1,166 @@
+#codex-canva-download-panel {
+  --codex-panel-width: min(380px, calc(100vw - 24px));
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  width: var(--codex-panel-width);
+  color: #162023;
+  font: 13px/1.35 Arial, sans-serif;
+  background: transparent;
+  transform: translateX(0);
+  transition: transform 180ms ease;
+  pointer-events: none;
+}
+
+#codex-canva-download-panel[data-hidden="true"] {
+  transform: translateX(calc(100% - 44px));
+}
+
+html.codex-canva-panel-open body {
+  padding-right: var(--codex-canva-panel-space, 380px) !important;
+  transition: padding-right 180ms ease;
+}
+
+html.codex-canva-panel-open,
+html.codex-canva-panel-open body {
+  overflow-x: hidden !important;
+}
+
+.codex-panel-tab {
+  position: absolute;
+  top: 132px;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 132px;
+  border: 1px solid rgba(16, 35, 39, 0.16);
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  color: #ffffff;
+  background: #13a38b;
+  box-shadow: 0 12px 28px rgba(13, 35, 38, 0.18);
+  cursor: pointer;
+  font-weight: 700;
+  pointer-events: auto;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+#codex-canva-download-panel[data-hidden="true"] .codex-panel-tab {
+  display: flex;
+}
+
+.codex-panel-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 0;
+  background: #ffffff;
+  border-left: 1px solid rgba(16, 35, 39, 0.16);
+  box-shadow: 0 16px 40px rgba(13, 35, 38, 0.2);
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+#codex-canva-download-panel[data-hidden="true"] .codex-panel-shell {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#codex-canva-download-panel[data-collapsed="true"] .codex-panel-body {
+  display: none;
+}
+
+.codex-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 58px;
+  padding: 12px 14px;
+  background: #f6fbfa;
+  border-bottom: 1px solid rgba(16, 35, 39, 0.12);
+}
+
+.codex-panel-title {
+  min-width: 0;
+  font-weight: 700;
+}
+
+.codex-panel-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.codex-icon-button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #c7d7d3;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #172026;
+  cursor: pointer;
+}
+
+.codex-panel-body {
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr);
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  padding: 14px;
+}
+
+.codex-primary-button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #13a38b;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.codex-primary-button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.codex-secondary-button {
+  min-height: 38px;
+  border: 1px solid #c7d7d3;
+  border-radius: 8px;
+  color: #172026;
+  background: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.codex-secondary-button:hover {
+  background: #f3f7f6;
+}
+
+.codex-panel-log {
+  min-height: 0;
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f3f7f6;
+  color: #405158;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 520px) {
+  #codex-canva-download-panel {
+    --codex-panel-width: min(340px, calc(100vw - 16px));
+  }
+
+  html.codex-canva-panel-open body {
+    padding-right: 0 !important;
+  }
+}

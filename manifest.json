@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Canva Pemalas Adventure",
+  "description": "Download Canva designs as PNG and PDF from the editor with one click.",
+  "version": "0.4.0",
+  "permissions": ["activeTab", "scripting", "storage", "sidePanel"],
+  "host_permissions": ["https://www.canva.com/*", "https://canva.com/*"],
+  "action": {
+    "default_title": "Canva Pemalas Adventure",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.canva.com/*", "https://canva.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canva Pemalas Adventure</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header>
+        <h1>Canva Pemalas Adventure</h1>
+        <p>PNG + PDF dalam satu urutan klik.</p>
+      </header>
+
+      <section class="formats" aria-label="Format download">
+        <label>
+          <input type="checkbox" value="PNG" checked>
+          <span>PNG</span>
+        </label>
+        <label>
+          <input type="checkbox" value="PDF Standard" checked>
+          <span>PDF Standard</span>
+        </label>
+        <label>
+          <input type="checkbox" value="PDF Print">
+          <span>PDF Print</span>
+        </label>
+        <label>
+          <input type="checkbox" value="MP4 Video">
+          <span>MP4 Video</span>
+        </label>
+      </section>
+
+      <label class="delay">
+        <span>Jeda antar format</span>
+        <select id="delayMs">
+          <option value="2500">2.5 detik</option>
+          <option value="3500" selected>3.5 detik</option>
+          <option value="5000">5 detik</option>
+          <option value="8000">8 detik</option>
+        </select>
+      </label>
+
+      <button id="start" type="button">Download Sekarang</button>
+      <p id="status" role="status"></p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
